@@ -1,0 +1,6 @@
+﻿customer_name,segment,product_name,category,quantity,total_amount,order_date
+Alex Chen,Gold,Laptop,Electronics,1,30000.00,2024-05-01
+Jenny Lin,Silver,Phone,Electronics,2,40000.00,2024-05-02
+Kevin Wu,VIP,Headphones,Accessories,3,9000.00,2024-05-03
+Cindy Huang,Gold,Monitor,Electronics,1,8000.00,2024-05-04
+David Tsai,Premium,Keyboard,Accessories,4,6000.00,2024-05-05

@@ -6,11 +6,17 @@
 
 # 🔄 Core Data Pipeline
 
-SQL → Data Processing → KPI Analysis → Excel → Power BI → Business Insights → AI Analysis
+SQL → Data Processing (Python) → KPI Analysis → Excel Reporting → Power BI Dashboard
 
-👉 這一系列專案都是用同一套分析流程做延伸，不同的是 business domain。
+👉 所有專案皆採用統一 BI 分析流程，不同 Business Domain。
 
-👉 從資料建模（Data Modeling）開始，到 KPI Dashboard 建立，再延伸到 AI 商業洞察分析。
+👉 AI 僅應用於 Customer Segmentation（Project 04）與未來 AI System（Project 05）。
+
+---
+
+# 🐍 Python Usage Scope
+
+In Project 01–03, Python is mainly used for data cleaning, exploratory data analysis (EDA), and basic visualization. In Project 04, Python is extended to perform RFM-based customer segmentation for advanced analytics.
 
 ---
 
@@ -26,13 +32,11 @@ SQL → Data Processing → KPI Analysis → Excel → Power BI → Business Ins
 營收、成本與利潤分析
 
 ### Project 04：Customer Segmentation Analysis
-RFM 客戶分群與 AI 商業分析
+RFM 客戶分群 + AI 商業分析
 
 ---
 
 # 📌 Project 01: Banking Analysis
-
----
 
 ## 🧠 專案概述
 
@@ -49,22 +53,16 @@ RFM 客戶分群與 AI 商業分析
 - Accounts（帳戶資料）
 - Transactions（交易資料）
 
----
-
 ### 📌 Data Management
 - Database 建立
 - Table 建立
 - Primary Key / Foreign Key
 - INSERT / UPDATE
 
----
-
 ### 📌 Data Integration & Analysis
 - INNER JOIN
 - LEFT JOIN
 - RIGHT JOIN
-
----
 
 ### 📌 KPI Analysis
 - 客戶交易金額分析
@@ -73,25 +71,26 @@ RFM 客戶分群與 AI 商業分析
 - 累積交易分析
 - 高價值客戶分析
 
----
-
 ### 📌 Advanced SQL Analysis
 - Subquery
-- CTE（Common Table Expression）
+- CTE
 - View
-- Window Function（ROW_NUMBER / OVER / PARTITION BY）
-
----
+- Window Function (ROW_NUMBER / OVER / PARTITION BY)
 
 ### 📌 Data Export
-SQL → CSV（給 Python / Power BI 用）
+
+SQL → CSV Export
+
+- Python Data Processing
+- Excel Analysis & Reporting
+- Power BI Dashboard Development
 
 ---
 
 ## 🔗 ER Model
 
 CUSTOMERS (1) ─── (N) ACCOUNTS  
-ACCOUNTS (1) ─── (N) TRANSACTIONS
+ACCOUNTS (1) ─── (N) TRANSACTIONS  
 
 ---
 
@@ -120,9 +119,13 @@ ACCOUNTS (1) ─── (N) TRANSACTIONS
 
 ---
 
-# 📌 Project 02: Sales Analysis
+## 📤 Data Workflow
+
+SQL → CSV → Python → KPI Analysis → Excel → Power BI
 
 ---
+
+# 📌 Project 02: Sales Analysis
 
 ## 🧠 專案概述
 
@@ -147,7 +150,7 @@ ACCOUNTS (1) ─── (N) TRANSACTIONS
 ## 🔗 ER Model
 
 CUSTOMERS (1) ─── (N) ORDERS  
-PRODUCTS (1) ─── (N) ORDERS
+PRODUCTS (1) ─── (N) ORDERS  
 
 ---
 
@@ -175,32 +178,17 @@ PRODUCTS (1) ─── (N) ORDERS
 
 ---
 
-# 📌 Project 03: Financial Analysis
+## 📤 Data Workflow
+
+SQL → CSV → Python → KPI Analysis → Excel → Power BI
 
 ---
+
+# 📌 Project 03: Financial Analysis
 
 ## 🧠 專案概述
 
-分析 Revenue / Cost / Profit 結構與 KPI dashboard。
-
----
-
-## 🗄️ SQL Dataset
-
-- product_name
-- category
-- quantity
-- revenue
-- cost
-- profit
-- sale_date
-
----
-
-## 🔗 ER Model
-
-PRODUCTS (1) ─── (N) SALES  
-SALES (1) ─── (N) FINANCIAL_RECORDS
+分析 Revenue / Cost / Profit 結構與 KPI Dashboard。
 
 ---
 
@@ -226,21 +214,15 @@ SALES (1) ─── (N) FINANCIAL_RECORDS
 ### Power Query
 - data type transformation
 
----
-
 ### DAX Measures
 - Total Revenue
 - Total Cost
 - Total Profit
 
----
-
 ### KPI Cards
 - Revenue KPI Card
 - Cost KPI Card
 - Profit KPI Card
-
----
 
 ### Dashboard Analysis
 - Category Revenue Analysis KPI
@@ -259,13 +241,11 @@ SALES (1) ─── (N) FINANCIAL_RECORDS
 
 ## 📤 Data Workflow
 
-SQL → CSV → Python → Excel → Power BI
+SQL → CSV → Python → KPI Analysis → Excel → Power BI
 
 ---
 
 # 📌 Project 04: Customer Segmentation Analysis
-
----
 
 ## 🧠 專案概述
 
@@ -280,21 +260,15 @@ RFM 客戶分群 + KPI Dashboard + AI 商業分析
 - Transactions（交易資料）
 - RFM_Result（RFM 分析結果）
 
----
-
 ### 📌 Data Management
 - Database 建立
 - Table 建立
 - Primary Key / Foreign Key
 - INSERT / UPDATE
 
----
-
 ### 📌 Data Integration & Analysis
 - INNER JOIN
 - LEFT JOIN
-
----
 
 ### 📌 KPI Analysis
 - Customer Spending Analysis
@@ -303,25 +277,27 @@ RFM 客戶分群 + KPI Dashboard + AI 商業分析
 - RFM Analysis
 - Customer Segmentation Analysis
 
----
-
 ### 📌 Advanced SQL Analysis
 - Subquery
 - CTE
 - View
 - Window Function (RANK)
 
----
-
 ### 📌 Data Export
-SQL → CSV
+
+SQL → CSV Export
+
+- Python RFM Analysis
+- AI Business Insights
+- Excel Analysis & Reporting
+- Power BI Dashboard Development
 
 ---
 
 ## 🔗 ER Model
 
 CUSTOMERS (1) ─── (N) TRANSACTIONS  
-CUSTOMERS (1) ─── (1) RFM_RESULT
+CUSTOMERS (1) ─── (1) RFM_RESULT  
 
 ---
 
@@ -353,15 +329,7 @@ CUSTOMERS (1) ─── (1) RFM_RESULT
 
 ## 🚀 Streamlit Dashboard
 
-### KPI Monitoring
-- Total Customers
-- Total Revenue
-- Average Spending
-- High Value Customers
-
----
-
-### Dashboard Analysis
+- KPI Monitoring
 - Customer Segment Distribution
 - Top Customer Spending
 - Customer Data Table
@@ -394,23 +362,17 @@ CUSTOMERS (1) ─── (1) RFM_RESULT
 ### Power Query
 - data type transformation
 
----
-
 ### DAX Measures
 - Total Revenue
 - Customer Count
 - Transaction Count
 - High Value Customers
 
----
-
 ### KPI Cards
 - Total Revenue KPI
 - Customer Count KPI
 - Transaction Count KPI
 - High Value Customers KPI
-
----
 
 ### Dashboard Analysis
 - Customer Segment Distribution
@@ -422,16 +384,16 @@ CUSTOMERS (1) ─── (1) RFM_RESULT
 
 ## 📈 Business Insights
 
-- 高價值客戶貢獻最多營收
-- RFM 可有效區分客戶價值
-- Dashboard 可支持商業決策
-- AI 可生成商業洞察
+- High-value customers contribute most revenue
+- RFM effectively segments customer value
+- Dashboard supports business decisions
+- AI generates actionable insights
 
 ---
 
 ## 📤 Data Workflow
 
-SQL → CSV → Python → Excel → Power BI → AI Analysis
+SQL → CSV → Python → RFM Analysis → AI Business Insights → Excel → Power BI
 
 ---
 
@@ -439,7 +401,12 @@ SQL → CSV → Python → Excel → Power BI → AI Analysis
 
 ## 📌 Project 05: AI Business Insight System
 
-AI 商業洞察系統（LLM + KPI Summary + Business Recommendation）
+AI Business Insight System (LLM + KPI Summary + Recommendation Engine)
+
+- Automated KPI Summarization
+- Business Insight Generation
+- Decision Support System
+- Executive Reporting Assistant
 
 ---
 
@@ -447,6 +414,10 @@ AI 商業洞察系統（LLM + KPI Summary + Business Recommendation）
 
 Junior BI / Data Analyst
 
-（Banking × Sales × Financial × Customer Segmentation Analytics）
+(Banking × Sales × Financial × Customer Segmentation Analytics)
 
-SQL + Python + Excel + Power BI + AI Analysis
+**Analytics Stack:**
+SQL → Python → Excel → Power BI
+
+**AI Capability:**
+Applied in Customer Segmentation (Project 04) and Future AI System (Project 05)

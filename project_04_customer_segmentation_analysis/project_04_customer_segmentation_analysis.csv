@@ -1,0 +1,7 @@
+﻿customer_id,customer_name,city,transaction_date,transaction_amount,segment_label
+1,Alex Chen,New Taipei,2024-05-01,5000.00,Mid Value
+1,Alex Chen,New Taipei,2024-05-03,2500.00,Mid Value
+2,Jenny Lin,Taichung,2024-05-04,1800.00,High Value
+3,Kevin Wu,Kaohsiung,2024-05-06,12000.00,High Value
+4,Cindy Huang,Taipei,2024-05-08,4500.00,Mid Value
+5,David Tsai,Tainan,2024-05-10,1500.00,Low Value
